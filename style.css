@@ -1,0 +1,496 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #333; /* Faint line */
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-nav .local-time {
+  color: #888;
+}
+
+.right-nav {
+  position: relative;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #333;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 0;
+  transition: background-color 0.3s;
+}
+
+.menu a:hover {
+  background-color: #555;
+}
+
+.menu.active {
+  display: flex;
+}
+
+#home {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.availability {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.status-dot {
+  height: 10px;
+  width: 10px;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.main-heading {
+  font-size: 60px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.location,
+.role {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+#featured-work {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.featured-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.featured-item {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  transition: transform 0.3s;
+}
+
+.featured-item img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.featured-item:hover img {
+  transform: scale(1.05);
+}
+
+.info {
+  margin-top: 20px;
+}
+
+.work-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.work-category {
+  font-size: 16px;
+  margin: 0;
+}
+
+.work-year {
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: right;
+}
+
+/* Rest of the existing styles... */
+
+#expertise {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.expertise-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.expertise-item {
+  background-color: #111;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 20px;
+  max-width: 300px;
+}
+
+.expertise-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.expertise-description {
+  font-size: 16px;
+}
+
+#testimonials {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.testimonial-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials {
+  display: flex;
+  width: 300%;
+}
+
+.testimonial {
+  flex: 0 0 33.3333%;
+  padding: 20px;
+  background-color: #111;
+  border-radius: 10px;
+  margin: 10px;
+  text-align: left;
+}
+
+.testimonial-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.testimonial-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.testimonial-position {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.testimonial-quote {
+  font-size: 16px;
+}
+
+/* Parallax Effect */
+#parallax-image {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+#parallax-image .parallax-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#parallax-image .parallax-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateZ(0);
+  transition: transform 0.1s ease-out;
+}
+
+/* FAQ Section */
+#faq {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background-color: #111;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  text-align: left;
+  padding: 20px;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+}
+
+.faq-question .plus {
+  position: absolute;
+  right: 20px;
+  transition: transform 0.3s;
+}
+
+.faq-answer {
+  display: none;
+  padding: 20px;
+  border-top: 1px solid #333;
+  font-size: 16px;
+  text-align: left;
+}
+
+.faq-answer.open {
+  display: block;
+}
+
+.faq-question.open .plus {
+  transform: rotate(45deg);
+}
+/* Footer Styles */
+footer {
+  position: relative;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-description {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.footer-rights {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.back-to-top {
+  font-size: 12px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.back-to-top:hover {
+  text-decoration: underline;
+}
+
+/* Parallax Effect */
+.parallax-footer {
+  background: url('path/to/your/image.png') no-repeat center center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  min-height: 70vh;
+}
+
+.contact-form {
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.contact-title {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.contact-description {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.form-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input,
+form textarea {
+  background: #333;
+  border: none;
+  padding: 15px;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 16px;
+}
+
+form button {
+  padding: 15px;
+  border: none;
+  background: #fff;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #ddd;
+}
+
+/* Featured work section */
+.featured-work {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.featured-work h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.featured-work p {
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.featured-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.featured-item {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.featured-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.featured-item:hover img {
+    transform: scale(1.05);
+}
+
+.featured-item .info {
+    margin-top: 20px;
+}
+
+.featured-item .info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.featured-item .info p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.featured-item .year {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: right;
+}
